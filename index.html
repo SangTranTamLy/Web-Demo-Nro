@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Web Demo Nro</title>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav__logo">
+                <p>Demo Nro.</p>
+            </div>
+            <div class="nav__menu">
+                <!-- Menu Liên kết mạng xã hội -->
+                <ul class="nav-menu">
+                    <li><a href="https://www.facebook.com" class="link active"><i class="ri-facebook-circle-line"></i> Facebook</a></li>
+                    <li><a href="https://www.messenger.com" class="link"><i class="ri-messenger-line"></i> Messenger</a></li>
+                    <li><a href="https://zalo.me" class="link"><i class="ri-chat-line"></i> Zalo</a></li>
+                    <li><a href="https://www.youtube.com" class="link"><i class="ri-youtube-line"></i> YouTube</a></li>
+                    <li><a href="https://discord.com" class="link"><i class="ri-discord-line"></i> Discord</a></li>
+                </ul>
+            </div>
+            <div class="nav__menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </div>
+
+    <div class="login"><!--.login giong voi form-box -->
+        <img src="login-bg.png" alt="image" class="login__bg">
+            <form class="register__container" id="register"> <!--.login__form-->
+                <div class="top">
+                    <header>  Sign Up </header>
+                </div>
+                <div class="login__inputs"><!--login__inouts giong voi two-forms-->
+                    <!--------------------------------------->
+                    <div class="input__box">
+                        <input type="text" placeholder="Ten tai khoan" required class="login__input"><!--.login__input css-->
+                        <i class="ri-user-line"></i>
+                    </div>
+                    <div class="input__box">
+                        <input type="password" placeholder="Mat khau" required class="login__input">
+                        <i class="ri-lock-line"></i>
+                    </div>
+                    <div class="input__box">
+                        <input type="password" placeholder="Nhap Lai Mat khau" required class="login__input">
+                        <i class="ri-lock-line"></i>
+                    </div>
+                    </div>
+                    <!--------------------------------------->
+                    <div class="input__box"></div>
+                    <input type="submit" class="submit" value="Đăng Ký"></input>
+                    <div class="login__check"> <!--giong two-col-->
+                        <div class="login__check-box">
+                            <input type="checkbox" id="register-check">
+                            <label for="register-check">Nhớ mật khẩu</label>
+                        </div>
+                        <div class="two">
+                            <label><a href="#">Điều khoản & Điều kiện</a></label>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <span> Chưa có tài khoản? <a href="#" onclick="login()"> Login </a></span>
+                    </div>    
+            </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

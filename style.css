@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* Thanh Header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+.nav{
+    position: none; /*thanh header*/
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39,39,39, 1), transparent);
+    z-index: 100;
+}
+.nav__logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nav__menu ul{
+    display: flex;
+}
+.nav__menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+/* menu*/
+.nav__menu-btn{
+    display: none;
+}
+
+
+.login{
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.login__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.register__container{
+    top: -150px;
+    display: flex; 
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    margin-inline: 4em; /* độ giãn hẹp của khung */
+    background-color: hsla(0, 100%, 50%, 0.01); /* color trong vien */
+    border: 2px solid hsla(0, 0%, 100%, .7); /*vin ngoai*/
+    padding: 1.5rem 6.5rem; /* độ giãn dài,rộng của khung */
+    border-radius: 1rem;/*do cong */
+    backdrop-filter: blur(10px); /* do mo */
+}
+.top span{ /* chua co tai khoan?*/
+    color:#fff;
+    margin-left: 5px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+.top span a{ 
+    font-weight: 500;
+    color: #ff4800;
+    margin-left: 5px;
+}
+header{
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;   
+    font-family:'Times New Roman', Times, serif
+}
+.login__inputs{
+    display:grid;
+    gap: 20px;
+}
+.login__input{
+    font-size: 15px;
+    background: rgba(255,255,255, 0.2);
+    color: #fff;
+    height: 45px;
+    width: 100%;
+    padding: 0 90px 0 50px; /* dai va rong cua o */
+    border: none;
+    border-radius: 30px; /* Độ cong của ô thông tin*/
+    outline: none;
+    transition: .2s ease;
+}
+.login__input:hover, .login__input:focus{ /* màu trong ô ghi di chuột */
+    background: rgba(255, 85, 0, 0.25);
+}
+::-webkit-input-placeholder{ /*chữ trong ô */
+    color: #fff;
+}
+.input__box i{/*chỉnh biểu tượng trong ô */
+    position: relative;
+    top: -30px;
+    left: 20px;
+    color: #fff;
+}
+.submit{ /*nut  Dang Ky */
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background: rgba(255, 85, 0, 0.7);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.submit:hover{
+    background: rgba(255,255,255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0,0,0, 0.2);
+}
+/*
+.login__title{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 1.25rem;
+}
+.login__inputs,
+.login__box{
+    display: grid;
+}
+*/
