@@ -42,10 +42,10 @@
 .link:hover, .active{
     border-bottom: 2px solid #fff;
 }
-/* menu*/
+/* menu
 .nav__menu-btn{
     display: none;
-}
+} */
 
 
 .login{
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
     height: 120vh;
-    overflow: hidden;
+    
     z-index: 2;
 }
 
@@ -65,9 +65,11 @@
     object-fit: cover;
     object-position: center;
 }
-.register__container{
+.login__container{
     top: -150px;
-    display: flex; 
+    position:initial;
+    left: 4px;
+    display: block; 
     flex-direction: column;
     transition: .5s ease-in-out;
     margin-inline: 4em; /* độ giãn hẹp của khung */
@@ -77,6 +79,49 @@
     border-radius: 1rem;/*do cong */
     backdrop-filter: blur(10px); /* do mo */
 }
+.register__container{
+    top: -150px;
+    position:static;
+    right: -520px;
+    display: none; 
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    margin-inline: 4em; /* độ giãn hẹp của khung */
+    background-color: hsla(0, 100%, 50%, 0.01); /* color trong vien */
+    border: 2px solid hsla(0, 0%, 100%, .7); /*vin ngoai*/
+    padding: 1.5rem 6.5rem; /* độ giãn dài,rộng của khung */
+    border-radius: 1rem;/*do cong */
+    backdrop-filter: blur(10px); /* do mo */
+}
+.forgot-password__container{
+    top: -150px;
+    position:static;
+    right: 4px;
+    display: none; 
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    margin-inline: 4em; /* độ giãn hẹp của khung */
+    background-color: hsla(0, 100%, 50%, 0.01); /* color trong vien */
+    border: 2px solid hsla(0, 0%, 100%, .7); /*vin ngoai*/
+    padding: 1.5rem 6.5rem; /* độ giãn dài,rộng của khung */
+    border-radius: 1rem;/*do cong */
+    backdrop-filter: blur(10px); /* do mo */
+}
+.reset-password__container{
+    top: -150px;
+    position:static;
+    right: -520px;
+    display: none; 
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    margin-inline: 4em; /* độ giãn hẹp của khung */
+    background-color: hsla(0, 100%, 50%, 0.01); /* color trong vien */
+    border: 2px solid hsla(0, 0%, 100%, .7); /*vin ngoai*/
+    padding: 1.5rem 6.5rem; /* độ giãn dài,rộng của khung */
+    border-radius: 1rem;/*do cong */
+    backdrop-filter: blur(10px); /* do mo */
+}
+
 .top span{ /* chua co tai khoan?*/
     color:#fff;
     margin-left: 5px;
@@ -98,7 +143,7 @@ header{
 }
 .login__inputs{
     display:grid;
-    gap: 20px;
+    gap: 10px;
 }
 .login__input{
     font-size: 15px;
@@ -141,14 +186,21 @@ header{
     background: rgba(255,255,255, 0.5);
     box-shadow: 1px 5px 7px 1px rgba(0,0,0, 0.2);
 }
-/*
-.login__title{
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 1.25rem;
+.login__check{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
 }
-.login__inputs,
-.login__box{
-    display: grid;
+.login__check .box{
+    display: flex;
+    gap: 5px;
 }
-*/
+.two label a{ /* chưa có tai khoản */
+    text-decoration: none;
+    color: #fff;
+}
+.two label a:hover{
+    text-decoration: underline;
+}

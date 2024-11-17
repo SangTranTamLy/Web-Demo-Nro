@@ -5,8 +5,13 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="img/meme1.png" type="image/png">
     <title>Web Demo Nro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script>
+        emailjs.init("db1VcepkIQxGQs_fr"); // Thay YOUR_PUBLIC_KEY bằng khóa API công khai của bạn
+    </script>
+
 </head>
 <body>
     <div class="wrapper">
@@ -17,22 +22,50 @@
             <div class="nav__menu">
                 <!-- Menu Liên kết mạng xã hội -->
                 <ul class="nav-menu">
-                    <li><a href="https://www.facebook.com" class="link active"><i class="ri-facebook-circle-line"></i> Facebook</a></li>
-                    <li><a href="https://www.messenger.com" class="link"><i class="ri-messenger-line"></i> Messenger</a></li>
+                    <li><a href="https://www.facebook.com/Gokana.Sang/" class="link active"><i class="ri-facebook-circle-fill"></i> Facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@fairytail100yq_mvs" class="link"><i class="ri-tiktok-line"></i> Tiktok</a></li>
                     <li><a href="https://zalo.me" class="link"><i class="ri-chat-line"></i> Zalo</a></li>
-                    <li><a href="https://www.youtube.com" class="link"><i class="ri-youtube-line"></i> YouTube</a></li>
+                    <li><a href="https://www.youtube.com/@Sang_TTL" class="link"><i class="ri-youtube-fill"></i> YouTube</a></li>
                     <li><a href="https://discord.com" class="link"><i class="ri-discord-line"></i> Discord</a></li>
                 </ul>
             </div>
-            <div class="nav__menu-btn">
-                <i class="ri-menu-line"></i>
-            </div>
         </nav>
     </div>
-
     <div class="login"><!--.login giong voi form-box -->
-        <img src="login-bg.png" alt="image" class="login__bg">
-            <form class="register__container" id="register"> <!--.login__form-->
+        <img src="img/login-bg.png" alt="image" class="login__bg">
+            <form class="login__container" id="login">
+                <div class="top">
+                    <header> Login </header> 
+                </div>
+                <div class="login__inputs"><!--login__inouts giong voi two-forms-->
+                    <!--------------------------------------->
+                    <div class="input__box">
+                        <input type="text" placeholder="Ten tai khoan" required class="login__input"><!--.login__input css-->
+                        <i class="ri-user-line"></i>
+                    </div>
+                    <div class="input__box">
+                        <input type="password" placeholder="Mat khau" required class="login__input">
+                        <i class="ri-lock-line"></i>
+                    </div>
+                </div>
+                        <!--------------------------------------->
+                <div class="input__box"></div>
+                <input type="submit" class="submit" value="Đăng Nhập"></input>
+                <div class="login__check"> <!--giong two-col-->
+                    <div class="box"> <!--login__check box-->
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Nhớ mật khẩu</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#" onclick="toForgotPassword()">Quên mật khẩu?</a></label>
+                    </div>
+                </div>
+                <div class="top">
+                    <span> Chưa có tài khoản? <a href="#" onclick="toRegister()"> Đăng Ký </a></span>
+                </div>    
+            </form>
+
+            <form class="register__container" id="register" style.display = "none"; > <!--.login__form-->
                 <div class="top">
                     <header>  Sign Up </header>
                 </div>
@@ -50,24 +83,67 @@
                         <input type="password" placeholder="Nhap Lai Mat khau" required class="login__input">
                         <i class="ri-lock-line"></i>
                     </div>
+                    <div class="input__box">
+                        <input type="email" placeholder="Email" required class="login__input">
+                        <i class="ri-mail-line"></i>
                     </div>
-                    <!--------------------------------------->
-                    <div class="input__box"></div>
-                    <input type="submit" class="submit" value="Đăng Ký"></input>
-                    <div class="login__check"> <!--giong two-col-->
-                        <div class="login__check-box">
-                            <input type="checkbox" id="register-check">
-                            <label for="register-check">Nhớ mật khẩu</label>
-                        </div>
-                        <div class="two">
-                            <label><a href="#">Điều khoản & Điều kiện</a></label>
-                        </div>
+                </div>
+                        <!--------------------------------------->
+                <div class="input__box"></div>
+                <input type="submit" class="submit" value="Đăng Ký"></input>
+                <div class="login__check"> <!--giong two-col-->
+                    <div class="box"> <!--login__check box-->
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check">Nhớ mật khẩu</label>
                     </div>
-                    <div class="top">
-                        <span> Chưa có tài khoản? <a href="#" onclick="login()"> Login </a></span>
-                    </div>    
+                    <div class="two">
+                        <label><a href="#">Điều khoản & Điều kiện</a></label>
+                    </div>
+                </div>
+                <div class="top">
+                    <span> Đã có tài khoản? <a href="#" onclick="toLogin()"> Đăng Nhập </a></span>
+                </div>    
             </form>
+            <!-- Form Quên Mật Khẩu -->
+            <form class="forgot-password__container" id="forgot-password">
+                <div class="top">
+                    <header> Quên Mật Khẩu </header>
+                </div>
+                <div class="login__inputs">
+                    <!-- Nhập Email -->
+                    <div class="input__box">
+                        <input type="email" placeholder="Nhập email của bạn" required class="login__input" id="email">
+                        <i class="ri-mail-line"></i>
+                    </div>
+                </div>
+                <input type="submit" class="submit" value="Gửi Mã Xác Thực">   
+            </form>
+
+            <!-- Form Nhập Mã và Đổi Mật Khẩu -->
+            <form class="reset-password__container" id="reset-password" style="display:none;">
+                <div class="top">
+                    <header> Đổi Mật Khẩu </header>
+                </div>
+                <div class="login__inputs">
+                    <!-- Nhập Mã Xác Thực -->
+                    <div class="input__box">
+                        <input type="text" placeholder="Nhập mã xác thực" required class="login__input" id="verification-code">
+                        <i class="ri-key-2-line"></i>
+                    </div>
+                    <!-- Đổi Mật Khẩu -->
+                    <div class="input__box">
+                        <input type="password" placeholder="Mật khẩu mới" required class="login__input" id="new-password">
+                        <i class="ri-lock-line"></i>
+                    </div>
+                    <div class="input__box">
+                        <input type="password" placeholder="Xác nhận mật khẩu mới" required class="login__input" id="confirm-password">
+                        <i class="ri-lock-line"></i>
+                    </div>
+                </div>
+                <input type="submit" class="submit" value="Đổi Mật Khẩu">
+            </form>
+
     </div>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
