@@ -40,9 +40,9 @@
                 <div class="login__inputs"><!--login__inouts giong voi two-forms-->
                     <!--------------------------------------->
                     <div class="input__box">
-                        <input type="text" placeholder="Ten tai khoan" required class="login__input"><!--.login__input css-->
+                        <input type="text" placeholder="Username & Email" required class="login__input" name="usernameOrEmail"><!--.login__input css-->
                         <i class="ri-user-line"></i>
-                    </div>
+                    </div>                    
                     <div class="input__box">
                         <input type="password" placeholder="Mat khau" required class="login__input">
                         <i class="ri-lock-line"></i>
@@ -72,7 +72,7 @@
                 <div class="login__inputs"><!--login__inouts giong voi two-forms-->
                     <!--------------------------------------->
                     <div class="input__box">
-                        <input type="text" placeholder="Ten tai khoan" required class="login__input"><!--.login__input css-->
+                        <input type="text" placeholder="Username" required class="login__input"><!--.login__input css-->
                         <i class="ri-user-line"></i>
                     </div>
                     <div class="input__box">
@@ -110,7 +110,10 @@
                     <header> Quên Mật Khẩu </header>
                 </div>
                 <div class="login__inputs">
-                    <!-- Nhập Email -->
+                    <div class="input__box">
+                        <input type="text" placeholder="Username" required class="login__input" id="text">
+                        <i class="ri-user-line"></i>
+                    </div>
                     <div class="input__box">
                         <input type="email" placeholder="Nhập email của bạn" required class="login__input" id="email">
                         <i class="ri-mail-line"></i>
@@ -118,19 +121,17 @@
                 </div>
                 <input type="submit" class="submit" value="Gửi Mã Xác Thực">   
             </form>
-
+            
             <!-- Form Nhập Mã và Đổi Mật Khẩu -->
             <form class="reset-password__container" id="reset-password" style="display:none;">
                 <div class="top">
                     <header> Đổi Mật Khẩu </header>
                 </div>
                 <div class="login__inputs">
-                    <!-- Nhập Mã Xác Thực -->
                     <div class="input__box">
                         <input type="text" placeholder="Nhập mã xác thực" required class="login__input" id="verification-code">
                         <i class="ri-key-2-line"></i>
                     </div>
-                    <!-- Đổi Mật Khẩu -->
                     <div class="input__box">
                         <input type="password" placeholder="Mật khẩu mới" required class="login__input" id="new-password">
                         <i class="ri-lock-line"></i>
@@ -142,7 +143,6 @@
                 </div>
                 <input type="submit" class="submit" value="Đổi Mật Khẩu">
             </form>
-
     </div>
     <script src="scripts.js"></script>
 </body>
